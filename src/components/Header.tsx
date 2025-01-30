@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MainNav from "./MainNav";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
               to="/"
               className={`flex items-center font-extrabold tracking-tight transition-all duration-500 ${
                 scrolled ? "text-2xl" : "text-4xl"
-              } text-orange-500`}
+              } text-blue-900`}
             >
               Stocks{" "}
               <span className="text-green-400 flex justify-center items-center">
@@ -40,7 +41,7 @@ export default function Header() {
           </div>
 
           <div className="hidden md:block">
-            <>MainNav</>
+            <MainNav />
           </div>
         </div>
       </div>
