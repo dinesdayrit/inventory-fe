@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,8 +22,8 @@ export default function Header() {
       >
         <div className="container flex justify-between items-center">
           <div className="flex items-baseline gap-1">
-            <a
-              href="/"
+            <Link
+              to="/"
               className={`flex items-center font-extrabold tracking-tight transition-all duration-500 ${
                 scrolled ? "text-2xl" : "text-4xl"
               } text-orange-500`}
@@ -31,7 +32,7 @@ export default function Header() {
               <span className="text-green-400 flex justify-center items-center">
                 Fix
               </span>
-            </a>
+            </Link>
           </div>
 
           <div className="md:hidden">
