@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <div className="fixed flex flex-col transition-colors duration-500 shadow-md z-30">
       <div
-        className={`flex items-center justify-between py-3 w-screen  transition-colors duration-500 shadow-md backdrop-blur-lg ${
+        className={`flex items-center justify-center py-3 w-screen  transition-colors duration-500 shadow-md backdrop-blur-lg ${
           scrolled && " bg-opacity-0"
         }`}
       >
