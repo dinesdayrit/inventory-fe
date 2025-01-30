@@ -28,9 +28,9 @@ export default function Header() {
                 scrolled ? "text-2xl" : "text-4xl"
               } text-orange-500`}
             >
-              dial
+              Stocks{" "}
               <span className="text-green-400 flex justify-center items-center">
-                Fix
+                Inventory
               </span>
             </Link>
           </div>
