@@ -1,12 +1,19 @@
+import { Route, Routes } from "react-router";
 import Layout from "./layouts/Layout";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <div>
-      <Layout>
-        <div className="text-red-500">Inventory App</div>
-      </Layout>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <LoginPage />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 
