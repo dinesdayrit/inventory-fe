@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
-import Layout from "./layouts/Layout";
-import LoginPage from "./pages/LoginPage";
-import DashboardPage from "./pages/DashboardPage";
+import Layout from "@/layouts/Layout";
+import LoginPage from "@/pages/LoginPage";
+import DashboardPage from "@/pages/DashboardPage";
 
 function App() {
   return (
