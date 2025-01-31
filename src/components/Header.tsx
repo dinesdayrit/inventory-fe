@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import MainNav from "./MainNav";
+import MainNav from "@/components/MainNav";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
