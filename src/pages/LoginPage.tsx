@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { LogInIcon } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function LoginPage() {
   const navigate = useNavigate();
