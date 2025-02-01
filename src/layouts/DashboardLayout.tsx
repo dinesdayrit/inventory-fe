@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 type Props = {
   children: React.ReactNode;
@@ -6,15 +7,14 @@ type Props = {
 
 const DashboardLayout = ({ children }: Props) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="max-h-screen flex flex-col">
       <Header />
-      <div className="flex-1 grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto mt-[87px]">
-        Sidebar
-        <div className="mt-[87px] flex items-center justify-center ">
-          {children}
+      <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto">
+        <Sidebar />
+        <div className="overflow-x-hidden px-8 pb-4">
+          <div className="flex justify-center items-center ">{children}</div>
         </div>
       </div>
-      <div>footer</div>
     </div>
   );
 };
