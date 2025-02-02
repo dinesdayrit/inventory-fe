@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import Layout from "@/layouts/Layout";
 import LoginPage from "@/pages/LoginPage";
 import DashboardPage from "@/pages/DashboardPage";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
       <Route
         path="/dashboard"
         element={
-          <Layout>
+          <DashboardLayout>
             <DashboardPage />
-          </Layout>
+          </DashboardLayout>
         }
       />
     </Routes>
