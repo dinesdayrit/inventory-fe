@@ -11,7 +11,7 @@ const DashboardLayout = ({ children }: Props) => {
       <Header />
       <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto py-4">
         <Sidebar />
-        <div className="flex justify-center items-center">
+        <div className=" overflow-x-hidden">
           <div className=" ">{children}</div>
         </div>
       </div>
