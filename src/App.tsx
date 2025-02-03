@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router";
 import Layout from "@/layouts/Layout";
 import LoginPage from "@/pages/LoginPage";
 import DashboardPage from "@/pages/DashboardPage";
-import DashboardLayout from "./layouts/DashboardLayout";
+import DashboardLayout from "@/layouts/DashboardLayout";
+import InventoryPage from "./pages/InventoryPage";
 
 function App() {
   return (
@@ -20,6 +21,14 @@ function App() {
         element={
           <DashboardLayout>
             <DashboardPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/inventory"
+        element={
+          <DashboardLayout>
+            <InventoryPage />
           </DashboardLayout>
         }
       />
