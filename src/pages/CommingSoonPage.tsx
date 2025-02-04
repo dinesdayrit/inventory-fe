@@ -3,21 +3,6 @@ import { Twitter, Facebook, Instagram } from "lucide-react";
 export default function ComingSoonPage() {
   return (
     <div className="h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white flex flex-col items-center justify-center p-4">
-      {/* Animated Background Elements */}
-      <div className="inset-0 overflow-hidden">
-        {[...Array(10)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-8 h-8 bg-white/10 rounded-lg animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 2}s`,
-            }}
-          />
-        ))}
-      </div>
-
       <main className="relative z-10 text-center max-w-2xl">
         <h1 className="text-5xl font-bold mb-6 animate-fade-in">
           Coming Soon!

@@ -41,6 +41,22 @@ function App() {
           </DashboardLayout>
         }
       />
+      <Route
+        path="/suppliers"
+        element={
+          <DashboardLayout>
+            <ComingSoonPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/settings"
+        element={
+          <DashboardLayout>
+            <ComingSoonPage />
+          </DashboardLayout>
+        }
+      />
     </Routes>
   );
 }
