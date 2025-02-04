@@ -5,6 +5,7 @@ import DashboardPage from "@/pages/DashboardPage";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import InventoryPage from "./pages/InventoryPage";
 import ComingSoonPage from "./pages/CommingSoonPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -55,6 +56,14 @@ function App() {
           <DashboardLayout>
             <ComingSoonPage />
           </DashboardLayout>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <Layout>
+            <NotFoundPage />
+          </Layout>
         }
       />
     </Routes>
