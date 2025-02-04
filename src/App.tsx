@@ -4,6 +4,7 @@ import LoginPage from "@/pages/LoginPage";
 import DashboardPage from "@/pages/DashboardPage";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import InventoryPage from "./pages/InventoryPage";
+import ComingSoonPage from "./pages/CommingSoonPage";
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
         element={
           <DashboardLayout>
             <InventoryPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/products"
+        element={
+          <DashboardLayout>
+            <ComingSoonPage />
           </DashboardLayout>
         }
       />
