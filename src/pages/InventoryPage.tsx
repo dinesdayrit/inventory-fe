@@ -10,17 +10,15 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import { dummyProducts } from "@/data/dummyProduct";
+import { AddItemForm } from "@/components/dashboard/inventoryPage/AddItemForm";
 
 export default function InventoryPage() {
   return (
     <div className="space-y-6">
       {/* Page Title and Actions */}
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">Inventory</h1>
-        <Button>
-          <Plus className="h-4 w-4 mr-2" />
-          Add Item
-        </Button>
+        <h1 className="text-2xl font-bold">Inventory Management</h1>
+        <AddItemForm />
       </div>
 
       {/* Filters and Search */}
