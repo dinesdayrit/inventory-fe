@@ -14,6 +14,7 @@ import {
   Clock,
   AlertCircle,
 } from "lucide-react";
+import { dummyProducts } from "@/data/dummyProduct";
 
 export default function DashboardPage() {
   // Mock data for the bar chart
@@ -45,7 +46,7 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-500">Total Products</p>
-              <p className="text-2xl font-bold">1,234</p>
+              <p className="text-2xl font-bold">{dummyProducts.length}</p>
             </div>
             <div className="p-3 bg-indigo-50 rounded-full">
               <Package className="h-6 w-6 text-indigo-600" />

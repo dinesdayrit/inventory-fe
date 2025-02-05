@@ -9,40 +9,9 @@ import {
   TableBody,
   TableCell,
 } from "@/components/ui/table";
+import { dummyProducts } from "@/data/dummyProduct";
 
 export default function InventoryPage() {
-  // Mock inventory data
-  const inventoryItems = [
-    {
-      id: 1,
-      name: "Product A",
-      category: "Electronics",
-      stock: 120,
-      lowStockThreshold: 50,
-    },
-    {
-      id: 2,
-      name: "Product B",
-      category: "Clothing",
-      stock: 80,
-      lowStockThreshold: 30,
-    },
-    {
-      id: 3,
-      name: "Product C",
-      category: "Home & Kitchen",
-      stock: 25,
-      lowStockThreshold: 50,
-    },
-    {
-      id: 4,
-      name: "Product D",
-      category: "Electronics",
-      stock: 200,
-      lowStockThreshold: 100,
-    },
-  ];
-
   return (
     <div className="space-y-6">
       {/* Page Title and Actions */}
@@ -80,7 +49,7 @@ export default function InventoryPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {inventoryItems.map((item) => (
+            {dummyProducts.map((item) => (
               <TableRow key={item.id}>
                 <TableCell className="font-medium">{item.name}</TableCell>
                 <TableCell>{item.category}</TableCell>
