@@ -12,6 +12,8 @@ import {
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
+import { dummyUsers } from "@/data/dummyUsers";
+import { useState } from "react";
 
 // Define Zod validation schema
 const loginSchema = z.object({
@@ -29,6 +31,7 @@ type LoginFormData = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const [loginError, setLoginError] = useState("");
 
   // Set up react-hook-form with Zod schema validation
   const form = useForm<LoginFormData>({
@@ -41,8 +44,15 @@ export default function LoginPage() {
 
   const handleLogin = (data: LoginFormData) => {
     // Navigate to dashboard if validation passes
+    const user = dummyUsers.find((user) => user.email === data.email);
+
+    if (!user || user.password !== data.password) {
+      setLoginError("Invalid email or password");
+      return;
+    }
+
+    localStorage.setItem("currentUser", JSON.stringify(user));
     navigate("/dashboard");
-    console.log(data); // Log the data for demonstration (you can replace this with actual login logic)
   };
 
   return (
@@ -59,6 +69,11 @@ export default function LoginPage() {
               onSubmit={form.handleSubmit(handleLogin)}
               className="space-y-6"
             >
+              {loginError && (
+                <div className="text-red-500 text-sm text-center mb-4">
+                  {loginError}
+                </div>
+              )}
               <FormField
                 control={form.control}
                 name="email"
