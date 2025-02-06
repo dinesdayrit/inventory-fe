@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import MainNav from "@/components/MainNav";
 
-export default function Header() {
+type Props = {
+  showMenu?: boolean;
+};
+export default function Header({ showMenu }: Props) {
   return (
     <div className="flex flex-col transition-colors duration-500 shadow-md z-30">
       <div
@@ -21,13 +24,16 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="md:hidden">
-            <>MobileNav</>
-          </div>
-
-          <div className="hidden md:block">
-            <MainNav />
-          </div>
+          {showMenu && (
+            <div className="md:hidden">
+              <>MobileNav</>
+            </div>
+          )}
+          {showMenu && (
+            <div className="hidden md:block">
+              <MainNav />
+            </div>
+          )}
         </div>
       </div>
     </div>
