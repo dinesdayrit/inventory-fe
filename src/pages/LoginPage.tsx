@@ -51,7 +51,7 @@ export default function LoginPage() {
       return;
     }
 
-    localStorage.setItem("currentUser", JSON.stringify(user.name));
+    localStorage.setItem("currentUser", user.name);
     navigate("/dashboard");
   };
 
