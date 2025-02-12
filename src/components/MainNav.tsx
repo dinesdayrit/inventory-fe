@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuItem,
@@ -9,6 +9,12 @@ import { Button } from "./ui/button";
 
 export default function MainNav() {
   const name = localStorage.getItem("currentUser");
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("/");
+    localStorage.removeItem("currentUser");
+  };
   return (
     <div>
       <DropdownMenu>
@@ -26,7 +32,10 @@ export default function MainNav() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Button className="flex flex-1 font-bold bg-violet-500">
+            <Button
+              className="flex flex-1 font-bold bg-violet-500"
+              onClick={handleLogout}
+            >
               Log out
             </Button>
           </DropdownMenuItem>
